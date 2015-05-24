@@ -82,11 +82,12 @@
 		<scijava.jvm.version>8</scijava.jvm.version>
 		<package-name>org.scijava.plugins.issues.github</package-name>
 		<license.licenseName>bsd_2</license.licenseName>
-		<license.copyrightOwners>Board of Regents of the University of
-Wisconsin-Madison.</license.copyrightOwners>
+		<license.copyrightOwners>SciJava developers.</license.copyrightOwners>
 
 		<!-- NB: Deploy releases to the SciJava Maven repository. -->
 		<releaseProfiles>sign,deploy-to-scijava</releaseProfiles>
+
+		<org.eclipse.egit.github.core.version>2.1.5</org.eclipse.egit.github.core.version>
 	</properties>
 
 	<dependencies>
@@ -98,7 +99,7 @@ Wisconsin-Madison.</license.copyrightOwners>
 		<dependency>
 			<groupId>org.eclipse.mylyn.github</groupId>
 			<artifactId>org.eclipse.egit.github.core</artifactId>
-			<version>2.1.5</version>
+			<version>${org.eclipse.egit.github.core.version}</version>
 		</dependency>
 
 		<!-- Test scope dependencies -->
