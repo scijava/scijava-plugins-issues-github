@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.scijava</groupId>
 		<artifactId>pom-scijava</artifactId>
-		<version>9.0.0</version>
+		<version>14.0.0</version>
 		<relativePath />
 	</parent>
 
@@ -16,7 +16,10 @@
 	<description>SciJava issue reporting plugin for GitHub.</description>
 	<url>https://github.com/scijava/scijava-plugins-issues-github</url>
 	<inceptionYear>2015</inceptionYear>
-
+	<organization>
+		<name>SciJava</name>
+		<url>http://www.scijava.org/</url>
+	</organization>
 	<licenses>
 		<license>
 			<name>Simplified BSD License</name>
@@ -50,6 +53,16 @@
 		</contributor>
 	</contributors>
 
+	<mailingLists>
+		<mailingList>
+			<name>SciJava</name>
+			<subscribe>https://groups.google.com/group/scijava</subscribe>
+			<unsubscribe>https://groups.google.com/group/scijava</unsubscribe>
+			<post>scijava@googlegroups.com</post>
+			<archive>https://groups.google.com/group/scijava</archive>
+		</mailingList>
+	</mailingLists>
+
 	<scm>
 		<connection>scm:git:git://github.com/scijava/scijava-plugins-issues-github</connection>
 		<developerConnection>scm:git:git@github.com:scijava/scijava-plugins-issues-github</developerConnection>
@@ -64,6 +77,13 @@
 		<system>Jenkins</system>
 		<url>http://jenkins.imagej.net/job/SciJava-plugins-issues-github/</url>
 	</ciManagement>
+
+	<properties>
+		<package-name>org.scijava.plugins.issues.github</package-name>
+		<license.licenseName>bsd_2</license.licenseName>
+		<license.copyrightOwners>Board of Regents of the University of
+Wisconsin-Madison.</license.copyrightOwners>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -84,29 +104,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<packageName>org.scijava.plugins.issues.github</packageName>
-						</manifest>
-					</archive>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>license-maven-plugin</artifactId>
-				<configuration>
-					<licenseName>bsd_2</licenseName>
-					<organizationName>Board of Regents of the University of
-Wisconsin-Madison.</organizationName>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
 </project>
